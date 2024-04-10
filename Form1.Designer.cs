@@ -50,16 +50,16 @@
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.gbSummry = new System.Windows.Forms.GroupBox();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblSize = new System.Windows.Forms.Label();
+            this.lblWehreToEat = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblToppings = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblCrust = new System.Windows.Forms.Label();
             this.labl3 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblToppings = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblWehreToEat = new System.Windows.Forms.Label();
+            this.lblSize = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.gpPizzSize.SuspendLayout();
             this.gpCrustSize.SuspendLayout();
             this.gbToppings.SuspendLayout();
@@ -111,10 +111,12 @@
             // rdMidum
             // 
             this.rdMidum.AutoSize = true;
+            this.rdMidum.Checked = true;
             this.rdMidum.Location = new System.Drawing.Point(10, 77);
             this.rdMidum.Name = "rdMidum";
             this.rdMidum.Size = new System.Drawing.Size(68, 20);
             this.rdMidum.TabIndex = 6;
+            this.rdMidum.TabStop = true;
             this.rdMidum.Tag = "30";
             this.rdMidum.Text = "Midum";
             this.rdMidum.UseVisualStyleBackColor = true;
@@ -123,12 +125,10 @@
             // rdSmall
             // 
             this.rdSmall.AutoSize = true;
-            this.rdSmall.Checked = true;
             this.rdSmall.Location = new System.Drawing.Point(10, 38);
             this.rdSmall.Name = "rdSmall";
             this.rdSmall.Size = new System.Drawing.Size(62, 20);
             this.rdSmall.TabIndex = 5;
-            this.rdSmall.TabStop = true;
             this.rdSmall.Tag = "20";
             this.rdSmall.Text = "Small";
             this.rdSmall.UseVisualStyleBackColor = true;
@@ -336,35 +336,50 @@
             this.gbSummry.TabStop = false;
             this.gbSummry.Text = "Order Summry";
             // 
-            // lblPrice
+            // lblWehreToEat
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Modern No. 20", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblPrice.Location = new System.Drawing.Point(87, 337);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(120, 83);
-            this.lblPrice.TabIndex = 26;
-            this.lblPrice.Tag = "40";
-            this.lblPrice.Text = "$0";
+            this.lblWehreToEat.AutoSize = true;
+            this.lblWehreToEat.Location = new System.Drawing.Point(158, 271);
+            this.lblWehreToEat.Name = "lblWehreToEat";
+            this.lblWehreToEat.Size = new System.Drawing.Size(56, 22);
+            this.lblWehreToEat.TabIndex = 35;
+            this.lblWehreToEat.Text = "Eat In";
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 22);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Size: ";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 269);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 22);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Where to eat:";
             // 
-            // lblSize
+            // lblToppings
             // 
-            this.lblSize.AutoSize = true;
-            this.lblSize.Location = new System.Drawing.Point(97, 45);
-            this.lblSize.Name = "lblSize";
-            this.lblSize.Size = new System.Drawing.Size(44, 22);
-            this.lblSize.TabIndex = 28;
-            this.lblSize.Text = "Size";
+            this.lblToppings.Location = new System.Drawing.Point(22, 183);
+            this.lblToppings.Name = "lblToppings";
+            this.lblToppings.Size = new System.Drawing.Size(265, 76);
+            this.lblToppings.TabIndex = 33;
+            this.lblToppings.Text = "NoToppings.";
+            this.lblToppings.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 152);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 22);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Toppings:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 307);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 22);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Total Price:";
             // 
             // lblCrust
             // 
@@ -384,50 +399,35 @@
             this.labl3.TabIndex = 29;
             this.labl3.Text = "Crust:";
             // 
-            // label3
+            // lblSize
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 307);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 22);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Total Price:";
+            this.lblSize.AutoSize = true;
+            this.lblSize.Location = new System.Drawing.Point(97, 45);
+            this.lblSize.Name = "lblSize";
+            this.lblSize.Size = new System.Drawing.Size(44, 22);
+            this.lblSize.TabIndex = 28;
+            this.lblSize.Text = "Size";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 22);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Toppings:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 22);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Size: ";
             // 
-            // lblToppings
+            // lblPrice
             // 
-            this.lblToppings.Location = new System.Drawing.Point(22, 183);
-            this.lblToppings.Name = "lblToppings";
-            this.lblToppings.Size = new System.Drawing.Size(265, 76);
-            this.lblToppings.TabIndex = 33;
-            this.lblToppings.Text = "NoToppings.";
-            this.lblToppings.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 269);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 22);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Where to eat:";
-            // 
-            // lblWehreToEat
-            // 
-            this.lblWehreToEat.AutoSize = true;
-            this.lblWehreToEat.Location = new System.Drawing.Point(158, 271);
-            this.lblWehreToEat.Name = "lblWehreToEat";
-            this.lblWehreToEat.Size = new System.Drawing.Size(56, 22);
-            this.lblWehreToEat.TabIndex = 35;
-            this.lblWehreToEat.Text = "Eat In";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Modern No. 20", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblPrice.Location = new System.Drawing.Point(87, 337);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(120, 83);
+            this.lblPrice.TabIndex = 26;
+            this.lblPrice.Tag = "40";
+            this.lblPrice.Text = "$0";
             // 
             // Form1
             // 
