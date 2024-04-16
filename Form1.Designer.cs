@@ -296,7 +296,8 @@
             // 
             // btnOrder
             // 
-            this.btnOrder.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOrder.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.Location = new System.Drawing.Point(347, 544);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(159, 44);
@@ -307,7 +308,8 @@
             // 
             // btnReset
             // 
-            this.btnReset.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReset.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(592, 544);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(163, 44);
